@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Management System😎</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+</head>
+<body>
+    <!-- header section -->
+    <header class="header">
+        <a href="#" class="logo"><span>Event</span>Universe</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#service">service</a>
+            <a href="#about">about</a>
+            <a href="#price">price</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div id="menu-bars" class="fas fa-bars"></div>
+    </header>
+
+    <!-- home section starts -->
+    <section class="home" id="home">
+        <div class="image">
+            <img src="{% static 'namaste_img.jpg' %}" alt="Namaste">
+        </div>
+
+        <div class="content">
+            <h3>It's time to celebrate the best <span>events</span></h3>
+            <button onclick="location.href='{% url 'register' %}'">Register</button>
+            <button onclick="location.href='{% url 'login' %}'">Login</button>
+            <button onclick="location.href='{% url 'dashboard' %}'">Dashboard</button>
+        </div>
+
+        <div id="post">
+            <h2 id="post-title"></h2>
+            <p id="post-body"></p>
+        </div>
+
+        <!-- Updated Swiper Container -->
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="{% static 'images/event1.jpg' %}" alt="Event 1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'images/event2.jpg' %}" alt="Event 2" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'images/event3.jpg' %}" alt="Event 3" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'images/event4.jpg' %}" alt="Event 4" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'images/event5.jpg' %}" alt="Event 5" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'images/event6.jpg' %}" alt="Event 6" />
+                </div>
+            </div>
+
+            <!-- Swiper Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Service section starts -->
+    <section class="service" id="service">
+        <h1 class="heading">Our <span>Services</span></h1>
+
+        <div class="box-container">
+            <div class="box">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Venue Selection</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea consequatur similique quam dicta tenetur sint quaerat expedita odit tempore necessitatibus.</p>
+            </div>
+
+            <div class="box">
+                <i class="fa-regular fa-envelope"></i>
+                <h3>Invitation Card</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea consequatur similique quam dicta tenetur sint quaerat expedita odit tempore necessitatibus.</p>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-music"></i>
+                <h3>Entertainment</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea consequatur similique quam dicta tenetur sint quaerat expedita odit tempore necessitatibus.</p>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Snacks</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea consequatur similique quam dicta tenetur sint quaerat expedita odit tempore necessitatibus.</p>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-photo-film"></i>
+                <h3>Photo and Video</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea consequatur similique quam dicta tenetur sint quaerat expedita odit tempore necessitatibus.</p>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-cake-candles"></i>
+                <h3>Cakes</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea consequatur similique quam dicta tenetur sint quaerat expedita odit tempore necessitatibus.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h1 class="heading"><span>About</span> Us</h1>
+        <div class="row">
+
+            <div class="image">
+                <img src="{% static 'about_img.jpg' %}" alt="">
+            </div>
+
+            <div class="content">
+                <h3>We give very special event venue.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolore sunt nemo asperiores, laboriosam numquam illum necessitatibus consectetur reiciendis commodi dolorum animi minus, provident perspiciatis deserunt quaerat minima quod quia.</p>
+                <a href="#" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Section -->
+    <section class="price" id="price">
+        <h1 class="heading">Our <span>Pricing</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <h3 class="title">For Birthdays</h3>
+                <h3 class="price">₹5000</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                </ul>
+                <a href="#" class="btn">Check Out</a>
+            </div>
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <h3 class="title">For Weddings</h3>
+                <h3 class="price">₹9000</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                </ul>
+                <a href="#" class="btn">Check Out</a>
+            </div>
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <h3 class="title">For Musical Nights</h3>
+                <h3 class="price">₹15000</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                </ul>
+                <a href="#" class="btn">Check Out</a>
+            </div>
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <h3 class="title">For Private celebrations</h3>
+                <h3 class="price">₹16000</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                    <li><i class="fa-solid fa-check"></i>Full Services</li>
+                </ul>
+                <a href="#" class="btn">Check Out</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Section -->
+    <section class="review" id="review">
+        <h1 class="heading">Customer <span>Review</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="{% 'images/pic1.jpg' %}" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, laudantium? Quis blanditiis ipsa quos ex, tenetur rem esse perferendis!</p>
+                <h3>John Doe</h3>
+                <span>Birthday boy</span>
+            </div>
+
+            <div class="box">
+                <img src="{% 'images/pic2.jpg' %}" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, laudantium? Quis blanditiis ipsa quos ex, tenetur rem esse perferendis!</p>
+                <h3>Jane Doe</h3>
+                <span>Wife</span>
+            </div>
+
+            <div class="box">
+                <img src="{% 'images/pic3.jpg' %}" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, laudantium? Quis blanditiis ipsa quos ex, tenetur rem esse perferendis!</p>
+                <h3>Bob Smith</h3>
+                <span>Groom</span>
+            </div>
+
+            <div class="box">
+                <img src="{% 'images/pic4.jpg' %}" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, laudantium? Quis blanditiis ipsa quos ex, tenetur rem esse perferendis!</p>
+                <h3>Alice Johnson</h3>
+                <span>Wedding Planner</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h1 class="heading">Contact <span>Us</span></h1>
+        <div class="row">
+            <div class="info">
+                <h3>Get in touch</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, laudantium? Quis blanditiis ipsa quos ex, tenetur rem esse perferendis!</p>
+                <div class="box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>contact@eventuniverse.com</p>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+123-456-7890</p>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-map-marker-alt"></i>
+                    <h3>Address</h3>
+                    <p>123 Street Name, City, Country</p>
+                </div>
+            </div>
+
+            <form action="#">
+                <h3>Contact Us</h3>
+                <input type="text" placeholder="Your Name" class="box" />
+                <input type="email" placeholder="Your Email" class="box" />
+                <input type="text" placeholder="Your Message" class="box" />
+                <input type="submit" value="Send" class="btn" />
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 Event Universe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{% static 'js/photo-gallery.js' %}"></script>
+</body>
+</html>
